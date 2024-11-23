@@ -1,6 +1,7 @@
 package org.example
 
 import org.example.array.RunningSumOf1dArray
+import org.example.array.maximumWealth
 import org.example.binarySearch.binarySearch
 import org.example.selectionSort.selectionSort
 
@@ -8,7 +9,8 @@ fun main() {
 
     // binarySearchTest()
     // selectionSortTest()
-    runningSumOf1dTest()
+    // runningSumOf1dTest()
+    richestCustomerWealthTest()
 }
 
 fun binarySearchTest() {
@@ -33,4 +35,18 @@ fun runningSumOf1dTest() {
 
     println( "Running Sum of 1d Array ${RunningSumOf1dArray().runningSum(input1).contentToString()}")
     println( "Running Sum of 1d Array ${RunningSumOf1dArray().runningSum(input2).contentToString()}")
+}
+
+fun richestCustomerWealthTest(){
+    val test1 = arrayOf(
+        intArrayOf(1,2,3),
+        intArrayOf(3,2,1)
+    )
+    val test2 = arrayOf(
+        intArrayOf(1,5),
+        intArrayOf(7,3),
+        intArrayOf(3,5)
+    )
+    println("richestCustomerWealthTest ${maximumWealth(test1)}")
+    println("richestCustomerWealthTest ${maximumWealth(test2)}")
 }
