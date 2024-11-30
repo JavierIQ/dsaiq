@@ -9,7 +9,7 @@ fun selectionSort(array: MutableList<Int>): MutableList<Int> {
     return newArray
 }
 
-fun findSmallest(array: MutableList<Int>): Int {
+private fun findSmallest(array: MutableList<Int>): Int {
     var smallest = array[0]
     var smallestIndex = 0
     for (i in array.indices) {
