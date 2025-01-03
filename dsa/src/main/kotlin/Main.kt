@@ -1,11 +1,13 @@
 package org.example
 
 import org.example.array.RunningSumOf1dArray
+import org.example.array.maxConsecutiveOnes
 import org.example.array.maximumWealth
 import org.example.binarySearch.binarySearch
 import org.example.selectionSort.selectionSort
 import org.example.twoPointers.hasPairWithSum
 import org.example.twoPointers.isPalindrome
+import org.example.twoPointers.rotateArray
 
 fun main() {
     // binarySearchTest()
@@ -14,6 +16,8 @@ fun main() {
     // richestCustomerWealthTest()
     // isPalindromeTest()
     // hasPairWithSumTest()
+    // rotateArrayKStepsTest()
+    maxConsecutiveOnesTest()
 }
 
 fun binarySearchTest() {
@@ -71,4 +75,18 @@ fun hasPairWithSumTest() {
     val target = 13
 
     println(hasPairWithSum(listTest, target).toString()) // Output: true (4 + 9 = 13)
+}
+
+fun rotateArrayKStepsTest() {
+    val listTest = intArrayOf(1, 2, 3, 4, 5, 6, 7)
+    val steptest = 4
+    println("Rotate list ${listTest.contentToString()} $steptest steps")
+    println(rotateArray(listTest, steptest).contentToString())
+}
+
+fun maxConsecutiveOnesTest() {
+    val test1 = arrayOf(1,1,0,1,1,1) // 3
+    val test2 = arrayOf(1,0,1,1,0,1) // 2
+    println( maxConsecutiveOnes(test1))
+    println( maxConsecutiveOnes(test2))
 }
