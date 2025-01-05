@@ -1,7 +1,10 @@
 package org.example.array
 
+import kotlin.math.abs
+import kotlin.math.log10
+
 fun myDvdShelf() {
-    val squareNumber = Array(10){ i ->
+    val squareNumber = Array(10) { i ->
         (i + 1) * (i + 1)
     }
 }
@@ -11,7 +14,7 @@ fun saveDVDList() {
     val avengersDVD = DVD(name = "The Avengers", releaseYear = 2012, director = "Joss Whedon")
     val incrediblesDVD = DVD(name = "The Incredibles", releaseYear = 2004, director = "Brad Bird")
     val findingDoryDVD = DVD(name = "Finding Dory", releaseYear = 2016, director = "Andrew Stanton")
-    val lionKingDVD = DVD(name = "The Lion King" , releaseYear = 2019, director = "Jon Favreau")
+    val lionKingDVD = DVD(name = "The Lion King", releaseYear = 2019, director = "Jon Favreau")
 
     dvdCollection[3] = incrediblesDVD
     dvdCollection[7] = avengersDVD
@@ -55,4 +58,43 @@ fun maxConsecutiveOnes(nums: Array<Int>): Int {
         }
     }
     return maxCount
+}
+
+/*
+Given an array nums of integers, return how many of them contain an even number of digits.
+Example 1:
+
+Input: nums = [12,345,2,6,7896]
+Output: 2
+Explanation:
+12 contains 2 digits (even number of digits).
+345 contains 3 digits (odd number of digits).
+2 contains 1 digit (odd number of digits).
+6 contains 1 digit (odd number of digits).
+7896 contains 4 digits (even number of digits).
+Therefore only 12 and 7896 contain an even number of digits.
+Example 2:
+
+Input: nums = [555,901,482,1771]
+Output: 1
+Explanation:
+Only 1771 contains an even number of digits.
+ */
+
+fun findNumbers(nums: Array<Int>): Int {
+    var counterEven = 0
+    for (i in nums) {
+        val numberOfDigits = divideNumber(i)
+        if (numberOfDigits % 2 == 0) {
+            counterEven += 1
+        }
+    }
+    return counterEven
+}
+
+fun divideNumber(num: Int): Int {
+    return when (num) {
+        0 -> 1
+        else -> log10(abs(num).toDouble()).toInt() + 1
+    }
 }
