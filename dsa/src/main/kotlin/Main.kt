@@ -1,9 +1,6 @@
 package org.example
 
-import org.example.array.RunningSumOf1dArray
-import org.example.array.findNumbers
-import org.example.array.maxConsecutiveOnes
-import org.example.array.maximumWealth
+import org.example.array.*
 import org.example.binarySearch.binarySearch
 import org.example.selectionSort.selectionSort
 import org.example.twoPointers.hasPairWithSum
@@ -19,7 +16,11 @@ fun main() {
     // hasPairWithSumTest()
     // rotateArrayKStepsTest()
     // maxConsecutiveOnesTest()
-    findNumbersTest()
+    // findNumbersTest()
+    // sortedSquaresTest()
+    // insertAtTheEnd()
+    // insertAtTheStart()
+    // insertAtAnyIndex()
 }
 
 fun binarySearchTest() {
@@ -87,15 +88,22 @@ fun rotateArrayKStepsTest() {
 }
 
 fun maxConsecutiveOnesTest() {
-    val test1 = arrayOf(1,1,0,1,1,1) // 3
-    val test2 = arrayOf(1,0,1,1,0,1) // 2
-    println( maxConsecutiveOnes(test1))
-    println( maxConsecutiveOnes(test2))
+    val test1 = arrayOf(1, 1, 0, 1, 1, 1) // 3
+    val test2 = arrayOf(1, 0, 1, 1, 0, 1) // 2
+    println(maxConsecutiveOnes(test1))
+    println(maxConsecutiveOnes(test2))
 }
 
 fun findNumbersTest() {
-    val test1 = arrayOf(12,345,2,6,7896)
-    val test2 = arrayOf(555,901,482,1771)
+    val test1 = arrayOf(12, 345, 2, 6, 7896)
+    val test2 = arrayOf(555, 901, 482, 1771)
     println(findNumbers(test1))
     println(findNumbers(test2))
+}
+
+fun sortedSquaresTest() {
+    val test1 = arrayOf(-4, -1, 0, 3, 10)
+    val test2 = arrayOf(-7, -3, 2, 3, 11)
+    println(sortedSquares(test1).joinToString())
+    println(sortedSquares(test2).joinToString())
 }
