@@ -37,3 +37,25 @@ fun insertAtAnyIndex() {
     intArray[2] = 30
     println(intArray.joinToString())
 }
+
+fun duplicateZeros(array: IntArray) {
+    // Length is 8
+    val countZeros = array.count { it == 0 }
+
+    // Original array pointer
+    var i = array.size - 1
+    // "Extended" array pointer
+    var j = array.size + countZeros - 1
+
+    while (i >= 0) {
+        if (j < array.size) array[j] = array[i]
+        if (array[i] == 0){
+            j--
+            if (j < array.size) array[j] = 0
+        }
+        i--
+        j--
+    }
+    println(array.joinToString())
+}
+

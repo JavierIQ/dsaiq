@@ -21,6 +21,7 @@ fun main() {
     // insertAtTheEnd()
     // insertAtTheStart()
     // insertAtAnyIndex()
+    duplicateZerosTest()
 }
 
 fun binarySearchTest() {
@@ -106,4 +107,9 @@ fun sortedSquaresTest() {
     val test2 = arrayOf(-7, -3, 2, 3, 11)
     println(sortedSquares(test1).joinToString())
     println(sortedSquares(test2).joinToString())
+}
+
+fun duplicateZerosTest() {
+    val testArray1 = intArrayOf(1,0,2,3,0,4,5,0)
+    duplicateZeros(testArray1)
 }
