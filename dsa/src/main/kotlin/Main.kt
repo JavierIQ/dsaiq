@@ -19,8 +19,8 @@ fun main() {
     // findNumbersTest()
     // sortedSquaresTest()
     // Arrays
-     insertAtTheEnd()
-    // insertAtTheStart()
+    // insertAtTheEnd()
+     insertAtTheStart()
     // insertAtAnyIndex()
     //duplicateZerosTest()
 }

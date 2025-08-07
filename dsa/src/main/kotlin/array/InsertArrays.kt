@@ -26,7 +26,22 @@ fun insertAtTheEnd() {
 
 fun insertAtTheStart() {
     val intArray = IntArray(6)
-    for (i in 3 downTo 0) {
+    var length = 0
+    // Inserting 1, 2 to the list
+    for ((i, value) in (0..2).withIndex()) {
+        intArray[value] = i
+        length++
+    }
+    // 0, 1, 2, 0, 0, 0
+    // Inserting 10 on the last index (length)
+    intArray[length] = 10
+    // 0, 1, 2, 10, 0, 0
+    println(intArray.joinToString())
+    // First, we will have to create space for a new element.
+    // We do that by shifting each element one index to the right.
+    // This will firstly move the element at index 3, then 2, then 1, then finally 0.
+    // We need to go backwards to avoid overwriting any elements.
+    for (i in length downTo 0) {
         intArray[i + 1] = intArray[i]
     }
     intArray[0] = 20
