@@ -4,7 +4,7 @@ fun insertAtTheEnd() {
     // Declare an integer array of 6 elements
     val intArray = IntArray(6)
 
-    for(i in intArray.indices) {
+    for (i in intArray.indices) {
         print(intArray[i])
     }
     println()
@@ -50,17 +50,40 @@ fun insertAtTheStart() {
 
 fun insertAtAnyIndex() {
     val intArray = IntArray(6)
-
-    // Say we want to insert the element at index 2.
-    // First, we will have to create space for the new element.
-    for (i in 4 downTo 2) {
-
-        // Shift each element one position to the right.
+    var length = 0
+    for ((i, value) in (0..2).withIndex()) {
+        intArray[value] = i
+        length++
+    }
+    intArray[length] = 10
+    for (i in length downTo 0) {
         intArray[i + 1] = intArray[i]
     }
-
+    intArray[0] = 20
+    println(intArray.joinToString())
+    // 20, 0, 1, 2, 10, 0
+//   Say we want to insert the element at index 2.
+//   First, we will have to create space for the new element.
+    for (i in 4 downTo 2) {
+        intArray[i + 1] = intArray[i]
+    }
     intArray[2] = 30
     println(intArray.joinToString())
+}
+
+fun insertTwentyFiveQuestion(
+    arr: IntArray,
+    index: Int,
+    newValue: Int
+) {
+    if (index > arr.lastIndex) return
+
+    for (i in 4 downTo index) {
+        arr[i + 1] = arr[i]
+    }
+
+    arr[index] = newValue
+    println(arr.joinToString())
 }
 
 fun duplicateZeros(array: IntArray) {

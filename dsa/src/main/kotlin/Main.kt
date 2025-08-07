@@ -20,8 +20,11 @@ fun main() {
     // sortedSquaresTest()
     // Arrays
     // insertAtTheEnd()
-     insertAtTheStart()
+    // insertAtTheStart()
     // insertAtAnyIndex()
+    insertTwentyFiveQuestion(
+        arr = intArrayOf(1, 2, 3, 77, 4, 5), index = 3, newValue = 77
+    )
     //duplicateZerosTest()
 }
 
@@ -111,6 +114,6 @@ fun sortedSquaresTest() {
 }
 
 fun duplicateZerosTest() {
-    val testArray1 = intArrayOf(1,0,2,3,0,4,5,0)
+    val testArray1 = intArrayOf(1, 0, 2, 3, 0, 4, 5, 0)
     duplicateZeros(testArray1)
 }
