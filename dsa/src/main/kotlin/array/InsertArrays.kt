@@ -4,13 +4,23 @@ fun insertAtTheEnd() {
     // Declare an integer array of 6 elements
     val intArray = IntArray(6)
 
-    // Add 3 elements to the Array
-    for ((length, i) in (0..2).withIndex()) {
-        intArray[length] = i
+    for(i in intArray.indices) {
+        print(intArray[i])
+    }
+    println()
+    intArray.forEach { i ->
+        print(i)
+    }
+    println()
+    for ((i, value) in intArray.withIndex()) {
+        println("Index $i has value $value")
+    }
+    println()
+    for ((i, value) in (0..2).withIndex()) {
+        intArray[value] = i
     }
 
-    intArray[intArray.lastIndex] = 10
-
+    println()
     println(intArray.joinToString())
 }
 
@@ -49,7 +59,7 @@ fun duplicateZeros(array: IntArray) {
 
     while (i >= 0) {
         if (j < array.size) array[j] = array[i]
-        if (array[i] == 0){
+        if (array[i] == 0) {
             j--
             if (j < array.size) array[j] = 0
         }
@@ -58,4 +68,3 @@ fun duplicateZeros(array: IntArray) {
     }
     println(array.joinToString())
 }
-

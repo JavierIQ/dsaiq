@@ -18,10 +18,11 @@ fun main() {
     // maxConsecutiveOnesTest()
     // findNumbersTest()
     // sortedSquaresTest()
-    // insertAtTheEnd()
+    // Arrays
+     insertAtTheEnd()
     // insertAtTheStart()
     // insertAtAnyIndex()
-    duplicateZerosTest()
+    //duplicateZerosTest()
 }
 
 fun binarySearchTest() {
