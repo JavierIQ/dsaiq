@@ -87,22 +87,31 @@ fun insertTwentyFiveQuestion(
 }
 
 fun duplicateZeros(array: IntArray) {
-    // Length is 8
-    val countZeros = array.count { it == 0 }
+    var last = array.lastIndex
+    var possibleDups = 0
 
-    // Original array pointer
-    var i = array.size - 1
-    // "Extended" array pointer
-    var j = array.size + countZeros - 1
-
-    while (i >= 0) {
-        if (j < array.size) array[j] = array[i]
-        if (array[i] == 0) {
-            j--
-            if (j < array.size) array[j] = 0
+    var left = 0
+    while (left <= last - possibleDups) {
+        if (array[left] == 0) {
+            if (left == last - possibleDups) {
+                array[last] = 0
+                last -= 1
+                break
+            }
+            possibleDups++
         }
-        i--
-        j--
+        left++
     }
-    println(array.joinToString())
+
+    val finalIndex = last - possibleDups
+
+    for (j in finalIndex downTo 0) {
+        if (array[j] == 0) {
+            array[j + possibleDups] = 0
+            array[j + possibleDups - 1] = 0
+            possibleDups --
+        } else {
+            array[j + possibleDups] = array[j]
+        }
+    }
 }
