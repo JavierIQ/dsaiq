@@ -115,3 +115,32 @@ fun duplicateZeros(array: IntArray) {
         }
     }
 }
+
+// nums1 = [1,2,3,0,0,0], m=3
+// nums2 = [2,5,6], n=3
+
+fun mergeSortedArray(nums1: IntArray, m: Int, nums2: IntArray, n: Int) {
+    // Three pointers
+    var p1 = m - 1 // last valid element nums1 = 2
+    var p2 = n - 1 // last element in nums2 = 2
+    var p = m + n - 1 // last index of the final merged array = 5
+
+    while (p1 >= 0 && p2 >= 0){
+        if (nums2[p2] > nums1[p1]) {
+            nums1[p] = nums2[p2]
+            p2--
+            p--
+        } else {
+            nums1[p] = nums1[p1]
+            p1--
+            p--
+        }
+    }
+    while (p2 >= 0) {
+        nums1[p] = nums2[p2]
+        p2--
+        p--
+    }
+
+    println(nums1.joinToString())
+}

@@ -25,8 +25,9 @@ fun main() {
 //    insertTwentyFiveQuestion(
 //        arr = intArrayOf(1, 2, 3, 77, 4, 5), index = 3, newValue = 77
 //    )
-    duplicateZeros()
+    //duplicateZeros()
     //duplicateZerosTest()
+    mergeSortedTest()
 }
 
 fun binarySearchTest() {
@@ -116,5 +117,18 @@ fun sortedSquaresTest() {
 
 fun duplicateZerosTest() {
     val testArray1 = intArrayOf(1, 0, 2, 3, 0, 4, 5, 0)
-    duplicateZeros()
+    duplicateZeros(testArray1)
+}
+
+fun mergeSortedTest() {
+    val nums1 = intArrayOf(1, 2, 3, 0, 0, 0)
+    val nums2 = intArrayOf(2, 5, 6)
+    val m = 3
+    val n = 3
+    mergeSortedArray(
+        nums1 = nums1,
+        nums2 = nums2,
+        m = m,
+        n = n
+    )
 }
