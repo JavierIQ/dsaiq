@@ -2,6 +2,7 @@ package org.example
 
 import org.example.array.*
 import org.example.binarySearch.binarySearch
+import org.example.examProblem.findLowestPrice
 import org.example.selectionSort.selectionSort
 import org.example.twoPointers.hasPairWithSum
 import org.example.twoPointers.isPalindrome
@@ -27,7 +28,10 @@ fun main() {
 //    )
     //duplicateZeros()
     //duplicateZerosTest()
-    mergeSortedTest()
+    // mergeSortedTest()
+    // findLowestPriceTest()
+    // deletingFromEndArray()
+    deletingFromStartArray()
 }
 
 fun binarySearchTest() {
@@ -131,4 +135,27 @@ fun mergeSortedTest() {
         m = m,
         n = n
     )
+}
+
+fun findLowestPriceTest() {
+    val products1 = listOf(
+        listOf("10", "dO", "d1"),
+        listOf("15", "EMPTY", "EMPTY"),
+        listOf("20", "d1", "EMPTY")
+    )
+    val discounts1 = listOf(
+        listOf("dO", "1", "27"),
+        listOf("d1", "2", "5")
+    )
+    println(findLowestPrice(products1, discounts1)) // => 35
+
+    val products2 = listOf(
+        listOf("10", "sale", "january-sale"),
+        listOf("200", "sale", "EMPTY")
+    )
+    val discounts2 = listOf(
+        listOf("sale", "0", "10"),
+        listOf("january-sale", "1", "10")
+    )
+    println(findLowestPrice(products2, discounts2)) // => 19
 }
