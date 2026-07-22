@@ -3,7 +3,14 @@ package org.example
 import org.example.array.*
 import org.example.binarySearch.binarySearch
 import org.example.examProblem.findLowestPrice
+import org.example.recursion.checkList
+import org.example.recursion.fibonacci
+import org.example.recursion.recursion
 import org.example.selectionSort.selectionSort
+import org.example.twoPointers.findFixingWindow
+import org.example.twoPointers.findK
+import org.example.twoPointers.findLongestOne
+import org.example.twoPointers.findSubArraysLessK
 import org.example.twoPointers.hasPairWithSum
 import org.example.twoPointers.isPalindrome
 import org.example.twoPointers.rotateArray
@@ -23,15 +30,24 @@ fun main() {
     // insertAtTheEnd()
     // insertAtTheStart()
     // insertAtAnyIndex()
-//    insertTwentyFiveQuestion(
-//        arr = intArrayOf(1, 2, 3, 77, 4, 5), index = 3, newValue = 77
-//    )
+    //    insertTwentyFiveQuestion(
+        //        arr = intArrayOf(1, 2, 3, 77, 4, 5), index = 3, newValue = 77
+    //    )
     //duplicateZeros()
     //duplicateZerosTest()
     // mergeSortedTest()
     // findLowestPriceTest()
     // deletingFromEndArray()
-    deletingFromStartArray()
+    // deletingFromStartArray()
+    //checkList(list = listOf(8,2,12,4,35))
+    //recursion(0)
+    //println("Fibonacci result = ${fibonacci(30)}")
+
+    //twoPointers(list = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9))
+    println("Find findK: ${findK(intArrayOf(1, 1, 1, 3), 3)}")
+    println("Find findSubArraysLessK: ${findSubArraysLessK(intArrayOf(10, 5, 2, 6), 100)}")
+    println("Find findLongestOne: ${findLongestOne("1101100111")}")
+    println("Find findFixingWindow: ${findFixingWindow(intArrayOf(3,-1,4,12,-8,5,6), 4)}")
 }
 
 fun binarySearchTest() {
