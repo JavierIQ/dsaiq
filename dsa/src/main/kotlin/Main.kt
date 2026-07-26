@@ -10,9 +10,11 @@ import org.example.selectionSort.selectionSort
 import org.example.twoPointers.findFixingWindow
 import org.example.twoPointers.findK
 import org.example.twoPointers.findLongestOne
+import org.example.twoPointers.findMaximumAverageSubarray
 import org.example.twoPointers.findSubArraysLessK
 import org.example.twoPointers.hasPairWithSum
 import org.example.twoPointers.isPalindrome
+import org.example.twoPointers.longestOnes
 import org.example.twoPointers.rotateArray
 
 fun main() {
@@ -44,10 +46,12 @@ fun main() {
     //println("Fibonacci result = ${fibonacci(30)}")
 
     //twoPointers(list = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9))
-    println("Find findK: ${findK(intArrayOf(1, 1, 1, 3), 3)}")
-    println("Find findSubArraysLessK: ${findSubArraysLessK(intArrayOf(10, 5, 2, 6), 100)}")
-    println("Find findLongestOne: ${findLongestOne("1101100111")}")
-    println("Find findFixingWindow: ${findFixingWindow(intArrayOf(3,-1,4,12,-8,5,6), 4)}")
+//    println("Find findK: ${findK(intArrayOf(1, 1, 1, 3), 3)}")
+//    println("Find findSubArraysLessK: ${findSubArraysLessK(intArrayOf(10, 5, 2, 6), 100)}")
+//    println("Find findLongestOne: ${findLongestOne("1101100111")}")
+//    println("Find findFixingWindow: ${findFixingWindow(intArrayOf(3,-1,4,12,-8,5,6), 4)}")
+//    println("Find findMaximumAverageSubarray: ${findMaximumAverageSubarray(intArrayOf(1,12,-5,-6,50,3), 4)}")
+    println("longestOnes: ${longestOnes(intArrayOf(1,1,1,0,0,0,1,1,1,1,0), k = 2)}")
 }
 
 fun binarySearchTest() {
