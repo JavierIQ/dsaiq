@@ -51,7 +51,10 @@ fun main() {
 //    println("Find findLongestOne: ${findLongestOne("1101100111")}")
 //    println("Find findFixingWindow: ${findFixingWindow(intArrayOf(3,-1,4,12,-8,5,6), 4)}")
 //    println("Find findMaximumAverageSubarray: ${findMaximumAverageSubarray(intArrayOf(1,12,-5,-6,50,3), 4)}")
-    println("longestOnes: ${longestOnes(intArrayOf(1,1,1,0,0,0,1,1,1,1,0), k = 2)}")
+//    println("longestOnes: ${longestOnes(intArrayOf(1,1,1,0,0,0,1,1,1,1,0), k = 2)}")
+//    println("maximumProduct: ${maximumProduct(intArrayOf(1,2,3,4))}")
+//    println("maxProduct: ${maxProduct(intArrayOf(1,5,4,5))}")
+    println("longestCommonPrefix: ${longestCommonPrefix(arrayOf("flower","flow","flight"))}")
 }
 
 fun binarySearchTest() {
