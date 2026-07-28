@@ -18,43 +18,16 @@ import org.example.twoPointers.longestOnes
 import org.example.twoPointers.rotateArray
 
 fun main() {
-    // binarySearchTest()
-    // selectionSortTest()
-    // runningSumOf1dTest()
-    // richestCustomerWealthTest()
-    // isPalindromeTest()
-    // hasPairWithSumTest()
-    // rotateArrayKStepsTest()
-    // maxConsecutiveOnesTest()
-    // findNumbersTest()
-    // sortedSquaresTest()
-    // Arrays
-    // insertAtTheEnd()
-    // insertAtTheStart()
-    // insertAtAnyIndex()
-    //    insertTwentyFiveQuestion(
-        //        arr = intArrayOf(1, 2, 3, 77, 4, 5), index = 3, newValue = 77
-    //    )
-    //duplicateZeros()
-    //duplicateZerosTest()
-    // mergeSortedTest()
-    // findLowestPriceTest()
-    // deletingFromEndArray()
-    // deletingFromStartArray()
-    //checkList(list = listOf(8,2,12,4,35))
-    //recursion(0)
-    //println("Fibonacci result = ${fibonacci(30)}")
-
-    //twoPointers(list = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9))
-//    println("Find findK: ${findK(intArrayOf(1, 1, 1, 3), 3)}")
-//    println("Find findSubArraysLessK: ${findSubArraysLessK(intArrayOf(10, 5, 2, 6), 100)}")
-//    println("Find findLongestOne: ${findLongestOne("1101100111")}")
-//    println("Find findFixingWindow: ${findFixingWindow(intArrayOf(3,-1,4,12,-8,5,6), 4)}")
-//    println("Find findMaximumAverageSubarray: ${findMaximumAverageSubarray(intArrayOf(1,12,-5,-6,50,3), 4)}")
-//    println("longestOnes: ${longestOnes(intArrayOf(1,1,1,0,0,0,1,1,1,1,0), k = 2)}")
-//    println("maximumProduct: ${maximumProduct(intArrayOf(1,2,3,4))}")
-//    println("maxProduct: ${maxProduct(intArrayOf(1,5,4,5))}")
-    println("longestCommonPrefix: ${longestCommonPrefix(arrayOf("flower","flow","flight"))}")
+    println(
+        "answerQueries: ${
+            answerQueries(
+                nums = intArrayOf(1, 6, 3, 2, 7, 2),
+                queries = arrayOf(intArrayOf(0, 3), intArrayOf(2, 5), intArrayOf(2, 4)),
+                limit = 13
+            ).contentToString()
+        }"
+    )
+//    println("removeDuplicates: ${removeDuplicates(intArrayOf(0,0,1,1,1,2,2,3,3,4))}")
 }
 
 fun binarySearchTest() {
@@ -181,4 +154,44 @@ fun findLowestPriceTest() {
         listOf("january-sale", "1", "10")
     )
     println(findLowestPrice(products2, discounts2)) // => 19
+}
+
+private fun backlog() {
+    // binarySearchTest()
+    // selectionSortTest()
+    // runningSumOf1dTest()
+    // richestCustomerWealthTest()
+    // isPalindromeTest()
+    // hasPairWithSumTest()
+    // rotateArrayKStepsTest()
+    // maxConsecutiveOnesTest()
+    // findNumbersTest()
+    // sortedSquaresTest()
+    // Arrays
+    // insertAtTheEnd()
+    // insertAtTheStart()
+    // insertAtAnyIndex()
+    //    insertTwentyFiveQuestion(
+    //        arr = intArrayOf(1, 2, 3, 77, 4, 5), index = 3, newValue = 77
+    //    )
+    //duplicateZeros()
+    //duplicateZerosTest()
+    // mergeSortedTest()
+    // findLowestPriceTest()
+    // deletingFromEndArray()
+    // deletingFromStartArray()
+    //checkList(list = listOf(8,2,12,4,35))
+    //recursion(0)
+    //println("Fibonacci result = ${fibonacci(30)}")
+
+    //twoPointers(list = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9))
+//    println("Find findK: ${findK(intArrayOf(1, 1, 1, 3), 3)}")
+//    println("Find findSubArraysLessK: ${findSubArraysLessK(intArrayOf(10, 5, 2, 6), 100)}")
+//    println("Find findLongestOne: ${findLongestOne("1101100111")}")
+//    println("Find findFixingWindow: ${findFixingWindow(intArrayOf(3,-1,4,12,-8,5,6), 4)}")
+//    println("Find findMaximumAverageSubarray: ${findMaximumAverageSubarray(intArrayOf(1,12,-5,-6,50,3), 4)}")
+//    println("longestOnes: ${longestOnes(intArrayOf(1,1,1,0,0,0,1,1,1,1,0), k = 2)}")
+//    println("maximumProduct: ${maximumProduct(intArrayOf(1,2,3,4))}")
+//    println("maxProduct: ${maxProduct(intArrayOf(1,5,4,5))}")
+//    println("longestCommonPrefix: ${longestCommonPrefix(arrayOf("flower","flow","flight"))}")
 }
